@@ -1,0 +1,10 @@
+{"moviename":"The Godfather", "Genre":"Drama/Crime", "Rating":9.2}
+{"moviename":"The Dark Knight", "Genre":"Drama/Thriller", "Rating":9},
+{"moviename":"Joker", "Genre":"Drama/Thriller", "Rating":8.9},
+{"moviename":"The Shawshank Redemption","Genre":"Drama/Mystery","Rating":9.3},
+{"moviename":"Inception", "Genre":"Sci-Fi/Thriller","Rating":8.8},
+{"moviename":"Seven","Genre":"Drama/Mystery","Rating":8.6},
+{"moviename":"The Godfather Part 2","Genre":"Crime/Drama","Rating":9},
+{"moviename":"The Silence of the Lambs","Genre":"Crime/Drama","Rating":8.6},
+{"moviename":"Rocky", "Genre":"Drama/Sport","Rating":8.1},
+{"moviename":"The Jurassic Park", "Genre":"Action/Adventure","Rating":8.1}

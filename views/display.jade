@@ -1,0 +1,42 @@
+
+
+block content
+    style.
+         body {
+            background-image: url(" https://quotesblog.net/wp-content/uploads/2017/03/You-either-die-a-hero.jpg");
+            background-color: #cccccc;
+            color: white;
+            }
+       
+         table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+            th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            }
+            tr:hover {background-color: grey;}
+    h1.
+        Movie List
+    body
+        table
+            thead
+                tr
+                    th Movie Name
+                    th Genre
+                    th Rating
+            tbody
+                each movie in movielist
+                    tr
+                        td=movie.moviename
+                        td=movie.Genre
+                        td=movie.Rating
+        #myNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                button#myButton.float-left.submit-button Click here to go back to home
+                script(type='text/javascript').
+                    document.getElementById("myButton").onclick = function () {
+                    location.href = "http://localhost:3000";
+                    };

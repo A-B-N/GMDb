@@ -1,2 +1,1 @@
-# GMDb
-A movie Rating Website
+# Assignment-Movie-Rating

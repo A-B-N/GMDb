@@ -1,0 +1,34 @@
+{
+  "name": "assignment-movie-rating",
+  "version": "1.0.0",
+  "description": "Movie Rating Application ",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.2.0",
+    "jade": "^1.11.0",
+    "line-reader": "^0.4.0",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.6",
+    "monk": "^7.1.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-B-N/Assignment-Movie-Rating.git"
+  },
+  "author": "Ajith Balaji Nagarajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-B-N/Assignment-Movie-Rating/issues"
+  },
+  "homepage": "https://github.com/A-B-N/Assignment-Movie-Rating#readme"
+}

@@ -1,0 +1,19 @@
+html
+   head
+      title Registration
+      link(rel="stylesheet", href="style.css")
+        
+   body
+      if(message)
+         h5 #{message}
+         form(action = "/register" method = "POST")
+             input(name = "username" type = "text" required 
+                   placeholder = "username")
+             input(name = "firstname" type = "text" required 
+                   placeholder = "firstname")
+             input(name = "lastname" type = "text" required 
+                   placeholder = "lastname")
+             input(name = "password" type = "password"  minlength ="5" required 
+                   data-strength class="form-control input-lg"
+                   placeholder = "password")
+             button(type = "Submit") Register me!
