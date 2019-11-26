@@ -1,1 +1,1 @@
-# Assignment-Movie-Rating
+# GMDb
