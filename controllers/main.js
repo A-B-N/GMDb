@@ -24,8 +24,8 @@ function sendPage(fileName, res) {
             }
         });
 }
-module.exports.index = function(req, res, next)  {  
-    res.render('index', { title: 'Authentication Demo' });  
+module.exports.index = function(req, res, next) {
+    res.render('index', { title: 'Authentication Demo' });
     console.log('Cookies: ', req.cookies);
 };
 module.exports.get_authentication = function(req, res) {
@@ -33,5 +33,11 @@ module.exports.get_authentication = function(req, res) {
 };
 
 module.exports.post_authentication = function(req, res) {
-    sendPage('sample.html',res);
+    sendPage('sample.html', res);
+};
+module.exports.get_dash = function(req, res) {
+    res.render('dashboard');
+};
+module.exports.post_dash = function(req, res) {
+    res.render('dashboard');
 };

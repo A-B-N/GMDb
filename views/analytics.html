@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.iconarchive.com/download/i61405/hadezign/hobbies/Movies.ico" />
+    <title>GMDB-Exploratory Analytics</title>
+    <link rel="stylesheet" href="../static/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/lib/css/keen-dashboards.css">
+    <link rel="stylesheet" href="../static/lib/css/dc.css">
+    <link rel="stylesheet" href="../static/css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+</head>
+
+<body class="application">
+    <div id="loading"> <img src="https://media0.giphy.com/media/bTR5IBkrWqXO8/source.gif"></div>
+    <div id="blocks">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="./">Home</a>
+
+
+                </div>
+                <div class="navbar-header">
+                    <a href="http://localhost:3001/display">Find a Movie</a>
+                </div>
+                <div class="navbar-header">
+                    <a href="http://localhost:3001/dashboard">Dashboard</a>
+                </div>
+                <div class="navbar-header">
+                    <a href="http://localhost:3001/#footer1">About Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="outer" class="container-fluid">
+
+            <div class="row">
+
+
+                <!-- Total Gross by Genre -->
+                <div class="col-lg-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Total Gross by Genre
+                        </div>
+                        <div class="chart-stage">
+                            <div id="funding-by-genre-row-chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--  Highest Rated Movie on IMDB -->
+                <div class="col-lg-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Highest Rated Movie on IMDB</div>
+                        <div class="chart-stage">
+                            <div id="highest-rated-chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Most Expensive Movie -->
+                <div class="col-lg-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Most Expensive Movie </div>
+                        <div class="chart-stage">
+                            <div id="most-expensive-pie-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Movie Profit Change Over Time -->
+            <div class="col-lg-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Movie Profit Change Over Time</div>
+                    <div class="chart-stage">
+                        <div id="time-line-chart"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Movie Budget Change Over Time -->
+            <div class="col-lg-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Movie Budget Change Over Time</div>
+                    <div class="chart-stage">
+                        <div id="num-movies-per-year"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="../static/lib/js/jquery.min.js"></script>
+    <script src="../static/lib/js/bootstrap.min.js"></script>
+    <script src="../static/lib/js/crossfilter.js"></script>
+    <script src="../static/lib/js/d3.js"></script>
+    <script src="../static/lib/js/dc.js"></script>
+    <script src="../static/lib/js/queue.js"></script>
+
+    <script src="../static/lib/js/keen.min.js"></script>
+    <script src="../static/js/graph.js"></script>
+
+</body>
+
+</html>

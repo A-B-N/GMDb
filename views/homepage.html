@@ -1,32 +1,1018 @@
-<html lang="en-US">
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    </head>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.iconarchive.com/download/i61405/hadezign/hobbies/Movies.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#daa37f">
     <style>
-
-        body {
-                background-image: url("https://www.ciol.com/wp-content/uploads/2016/04/the-top-5-movies-destined-to-flop-in-2016-835409.jpg");
-                background-color: #cccccc;
-            }
+        @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+        @import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+        /*--------------------------------
+RESET
+---------------------------------*/
         
+        * {
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+        /*--------------------------------
+GLOBAL
+---------------------------------*/
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
+        
+        p {
+            color: #767676;
+            line-height: 23px;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .btn {
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            background-color: #daa37f;
+            border-radius: 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .btn--opacity {
+            animation: opacity 3s;
+        }
+        
+        .sect {
+            padding: 130px 0;
+        }
+        
+        .sect--brown {
+            background-color: #1d140b;
+        }
+        
+        .sect--grey {
+            background-color: #ebebeb;
+        }
+        
+        .sect--no-bottom {
+            padding-bottom: 0;
+        }
+        
+        .sect--white-text {
+            color: #fff;
+        }
+        
+        .col--inbl {
+            display: inline-block;
+            float: none;
+        }
+        
+        .row--center {
+            text-align: center;
+        }
+        
+        .row--small {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .row--margin {
+            margin-top: 65px;
+        }
+        /*--------------------------------
+ANIOMATION
+---------------------------------*/
+        
+        @-webkit-keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @-moz-keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @-o-keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @-webkit-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-o-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*--------------------------------
+BANNER
+---------------------------------*/
+        
+        .banner {
+            background-image: url('https://www.baltimoresportsandlife.com/wp-content/uploads/2016/07/Movies.jpg');
+            background-color: #000;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: table;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .banner__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: table;
+            height: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            animation: banner-in 2s;
+        }
+        
+        .banner__container {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .banner__scroll-down {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -12px;
+            cursor: pointer;
+            animation: opacity 3s;
+        }
+        
+        .banner__title {
+            font-size: 56px;
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            animation: opacity 3s;
+        }
+        
+        .banner__text {
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+            margin-bottom: 18px;
+            animation: opacity 3s;
+        }
+        /*--------------------------------
+TYPE OF COFFEE
+---------------------------------*/
+        
+        #section2 {
+            background-image: url('https://cdn.onebauer.media/one/empire-tmdb/films/3082/images/s58uDwuyVMqgsbmnfyrbpfF147.jpg?quality=50&width=1800&ratio=16-9&resizeStyle=aspectfill&format=jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #fff;
+        }
+        
+        .sect__title {
+            margin-top: 0;
+            text-transform: uppercase;
+            line-height: 40px;
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .sect__subtitle {
+            margin-bottom: 0;
+            color: white;
+        }
+        
+        .coffee {
+            padding: 0 25px;
+        }
+        
+        .coffee__name {
+            letter-spacing: 1px;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            color: chocolate;
+            background-color: #ffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .coffee__img {
+            width: 90%;
+            border-radius: 50%;
+        }
+        
+        .coffee__descr {
+            margin: 0;
+            line-height: 23px;
+            font-weight: bolder;
+            color: chocolate;
+            background-color: #ffff;
+        }
+        /*--------------------------------
+STORY
+---------------------------------*/
+        
+        .story-img {
+            background-image: url('https://s.yimg.com/uu/api/res/1.2/HoN8qgYTW9pltlGduwDe8g--~B/aD0xMzYzO3c9MjA0ODtzbT0xO2FwcGlkPXl0YWNoeW9u/http://media.zenfs.com/en-US/blogs/movie-news/4e83bad0-c1c9-11e3-b812-f709edc55f29_2048_SayAnything.jpg');
+            height: 0;
+            padding-bottom: 52%;
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #1d140b;
+        }
+        /*--------------------------------
+2 HALF SECTION 
+---------------------------------*/
+        
+        .half-sect__second {
+            background-image: url('https://img.theculturetrip.com/768x432/wp-content/uploads/2016/02/titanic-movie-promo-stills-wallpaper-4.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #fff;
+        }
+        
+        .half {
+            width: 50%;
+            display: table-cell;
+            background-color: #fff;
+        }
+        
+        .half-sect__first {
+            padding: 150px;
+            background-color: #fff;
+        }
+        
+        .description__p {
+            margin-bottom: 40px;
+        }
+        
+        .description__title {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        /*--------------------------------
+GREAT COFFEE
+---------------------------------*/
+        
+        .sect--great {
+            background-image: url('https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2017/04/01_ParksBlog_PandoraMerchArt_FEATURE.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #fff;
+        }
+        
+        .des__title {
+            color: #fff;
+        }
+        
+        .des__p {
+            color: #fff;
+        }
+        /*--------------------------------
+THE BEST COFFEE SHOP
+---------------------------------*/
+        
+        .sect--best {
+            background-image: url('https://images5.alphacoders.com/590/590862.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 160px 0;
+            background-color: #000;
+        }
+        
+        .best__title {
+            letter-spacing: 1px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .best__img {
+            width: 50px;
+        }
+        
+        .best--margin {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .best--bottom {
+            margin-bottom: 40px;
+            margin-right: 150px;
+        }
+        
+        .icon1:hover {
+            transform: scale(1.5);
+        }
+        
+        .icon2:hover {
+            transform: scale(1.5);
+        }
+        
+        .icon3:hover {
+            transform: scale(1.5);
+        }
+        /*--------------------------------
+THREE IMAGES
+---------------------------------*/
+        
+        .three-img__img {
+            height: 0;
+            padding-bottom: 33.3%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .three-img {
+            display: table;
+            height: 30%;
+            width: 100%;
+        }
+        
+        .three-img--1 {
+            background-image: url('http://image.ibb.co/jjTnKG/gallery_coffee_image_1.jpg');
+        }
+        
+        .three-img--2 {
+            background-image: url('http://image.ibb.co/iKxmDb/gallery_coffee_image_2_1.jpg');
+        }
+        
+        .three-img--3 {
+            background-image: url('http://image.ibb.co/b5qTRw/gallery_coffee_image_5.jpg');
+        }
+        /*--------------------------------
+BLOG IMAGES
+---------------------------------*/
+        
+        . .last-articles {
+            margin-top: 50px;
+        }
+        
+        .sec__title {
+            margin-top: 0;
+            text-transform: uppercase;
+            line-height: 40px;
+            font-size: 30px;
+            color: chocolate;
+            margin-bottom: 10px;
+        }
+        
+        .sec__subtitle {
+            margin-bottom: 5;
+            color: chocolate;
+        }
+        
+        .article-pre__img {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding-bottom: 80%;
+        }
+        
+        .article-pre {
+            background-color: #fff;
+        }
+        
+        .article-pre__title {
+            letter-spacing: 1px;
+            font-size: 16px;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .article-pre__date {
+            color: #767676;
+            line-height: 23px;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0;
+            margin-bottom: 5px;
+            display: inline-block;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .article-pre__info {
+            padding: 25px 20px 20px 20px;
+        }
+        
+        .article-pre__ex {
+            margin: 0;
+            line-height: 22px;
+        }
+        
+        .article-pre-1 {
+            cursor: pointer;
+        }
+        
+        .article-pre-1:hover {
+            transform: scale(1.1);
+        }
+        
+        .article-pre-2:hover {
+            transform: scale(1.1);
+        }
+        
+        .article-pre-3:hover {
+            transform: scale(1.1);
+        }
+        
+        .article-pre-2 {
+            cursor: pointer;
+        }
+        
+        .article-pre-3 {
+            cursor: pointer;
+        }
+        
+        .article-pre-1 .article-pre__img {
+            background-image: url('https://cdn.vox-cdn.com/thumbor/TM0IP7VIqnExlbRevtx69vV0OUs=/0x0:1200x800/1200x800/filters:focal(506x134:698x326)/cdn.vox-cdn.com/uploads/chorus_image/image/65746827/frozen2.0.jpg');
+        }
+        
+        .article-pre-2 .article-pre__img {
+            background-image: url('https://cdn3.movieweb.com/i/article/iwMjUzXeGr8W2Y5D1T76b6IRr5S2Tw/798:75/The-Shining-White-House-Horror-Movie-Fede-Alvarez.jpg');
+        }
+        
+        .article-pre-3 .article-pre__img {
+            background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2019/11/Disney-Plus-and-Netflix.jpg?q=50&fit=crop&w=798&h=407&dpr=1.5');
+        }
+        /*--------------------------------
+FOOTER
+---------------------------------*/
+        
+        .footer {
+            display: table;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .footer__half {
+            width: 50%;
+            display: table-cell;
+            padding: 100px 140px;
+        }
+        
+        .footer__half-1 {
+            background-image: url('https://pmcdeadline2.files.wordpress.com/2016/06/movie-theater1.jpg');
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .footer__half-2 {
+            background-color: #000;
+        }
+        
+        .footer__big-title {
+            margin-top: 0;
+            text-transform: uppercase;
+            line-height: 40px;
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+        
+        .footer__title {
+            letter-spacing: 1px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #daa37f;
+        }
+        
+        .footer__desc {
+            color: chocolate;
+            margin-bottom: 25px;
+            font-weight: bolder;
+        }
+        
+        .footer1__desc {
+            color: #daa37f;
+            margin-bottom: 25px;
+            font-weight: bolder;
+        }
+        /*--------------------------------
+RESPONSIVE
+---------------------------------*/
+        
+        @media screen and (max-width:1024px) {
+            .sect {
+                padding: 100px 0;
+            }
+            .row--margin {
+                margin-top: 55px;
+            }
+            .banner__title {
+                font-size: 54px;
+            }
+            .half-sect__first {
+                padding: 100px;
+            }
+            .three-img__img {
+                padding-bottom: 40%;
+            }
+            .sect--no-bottom {
+                padding-bottom: 0px !important;
+            }
+            .footer__half {
+                padding: 90px 120px;
+            }
+            #footer1 {
+                display: none;
+            }
+            .footer {
+                position: relative;
+            }
+        }
+        
+        @media screen and (max-width:991px) {
+            .sect {
+                padding: 80px 0;
+            }
+            .banner__title {
+                font-size: 50px;
+            }
+            .row--margin {
+                margin-top: 45px;
+            }
+            .coffee {
+                padding: 0 15px;
+            }
+            .coffe__img {
+                width: 100%;
+            }
+            .half-sect__first {
+                padding: 80px;
+            }
+            .last-articles {
+                margin-bottom: 30px;
+            }
+            .sect__title,
+            .description__title,
+            .footer__big-title {
+                line-height: 38px;
+                font-size: 28px;
+            }
+            .footer__half {
+                padding: 60px 90px;
+            }
+        }
+        
+        @media screen and (max-width:767px) {
+            .banner__title {
+                font-size: 48px;
+            }
+            .three-img {
+                height: auto;
+            }
+            .sect {
+                padding: 60px 0;
+            }
+            .row--margin {
+                margin-top: 30px;
+            }
+            .coffee {
+                margin-bottom: 30px;
+            }
+            .coffee__img {
+                width: 35%;
+            }
+            .coffee__descr,
+            .sect__subtitle {
+                padding: 0 50px;
+            }
+            .sect__title,
+            .description__title,
+            .footer__big-title {
+                line-height: 36px;
+                font-size: 26px;
+            }
+            .half-sect__first {
+                padding: 50px;
+            }
+            .article-pre {
+                margin-bottom: 15px;
+            }
+            .footer__half {
+                width: 100%;
+                display: block;
+                padding: 50px 50px;
+            }
+            .half-sect {
+                display: block;
+                height: auto;
+            }
+            .half {
+                width: 100%;
+                display: block;
+            }
+            .half-sect__second {
+                padding-bottom: 60%;
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            .banner__title {
+                font-size: 44px;
+            }
+            .sect {
+                padding: 50px 0;
+            }
+            .sect__title,
+            .description__title {
+                line-height: 30px;
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            .sect__subtitle {
+                padding: 0;
+            }
+            .coffee__img {
+                width: 65%;
+            }
+            .coffee__descr,
+            .sect__subtitle {
+                padding: 0 15px;
+            }
+            .best--margin {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .row--margin {
+                margin-top: 15px;
+            }
+            .best__img {
+                width: 44px;
+            }
+            .best__title {
+                margin-top: 15px;
+            }
+            .three-img__img {
+                padding-bottom: 60%;
+                width: 100%;
+            }
+            .footer__half {
+                padding: 35px 35px;
+            }
+            .footer__desc {
+                margin-bottom: 10px;
+            }
+        }
     </style>
-    <body>
-            <div class="jumbotron text-center" style="margin-bottom:0">
-                    <h1>Welcome to GMDb Homepage!</h1>
-                    <p>click below to navigate</p> 
-                  </div>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                            <li class="active"><a href="http://localhost:3000/display">Display</a></li>
-                            <li><a href="http://localhost:3000/addmovie">Add a Movie</a></li>
-                            <li><a href="http://localhost:3000/deletemovie">Delete a Movie</a></li>
-                            <li><a href="http://localhost:3000/updatemovie">Update a Movie</a></li>
-                            <li><a href="http://localhost:3000/search">Search a Movie</a></li>
-                    </ul>
-                </div>
+    <title>GMDb - Homepage</title>
+</head>
+
+
+<body>
+    <ul>
+        <li>
+            <a href="http://localhost:3001/display">Find a Movie</a>
+        </li>
+        <li>
+            <a href="http://localhost:3001/dashboard">Dashboard</a>
+        </li>
+        <li>
+            <a href="http://localhost:3001/analytics">Exploratory Analytics</a>
+        </li>
+        <li>
+            <a href="#footer1">About Us</a>
+        </li>
+
+    </ul>
+    <div class="banner">
+        <div class="banner__overlay">
+            <div class="banner__container">
+                <h1 class="banner__title">GMDB</h1>
+                <p class="banner__text">One Stop Destination For Movie Buffs</p>
+            </div>
+            <a href="#section2"><img class="banner__scroll-down" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiNGRkZGRkYiLz4KICA8L2c+Cjwvc3ZnPgo="
+                /></a>
         </div>
-    </nav>
-    </body>
-</html>
+    </div>
+    <div class="sect sect--type" id="section2">
+        <div class="container">
+            <div class="row row--center">
+                <div class="col-md-5 col-xs-8 col-sm-6 col--inbl">
+
+                    <h1 class="sect__title">When Black and White was Gold</h1>
+                    <p class="sect__subtitle">
+                        Before there was color, filmmakers learned their craft using black and white film stocks and gave us some of cinema's finest moments on celluloid.
+                    </p>
+
+                </div>
+            </div>
+            <div class="row row--small row--margin row--center">
+                <div class="col-md-4 col-sm-4 coffee">
+                    <img src="https://pbs.twimg.com/profile_images/631900706597937156/1e7brovN_400x400.jpg" class="coffee__img">
+                    <h2 class="coffee__name">Julie Andrews</h2>
+                    <p class="coffee__descr">
+                        Was the 61st actress to receive an Academy Award; she won the Best Actress Oscar for Mary Poppins (1964) at The 37th Annual Academy Awards (1965) on April 5, 1965.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-4 coffee">
+                    <img src="https://cdn.dialogues.org/100555/images/576224527b2840353640e4f7/bg_tn_si0g13xnla_100555.jpg" class="coffee__img">
+                    <h2 class="coffee__name">James Stewart</h2>
+                    <p class="coffee__descr">
+                        Ranked #10 in Empire (UK) magazine's "The Top 100 Movie Stars of All Time" list. [October 1997]
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-4 coffee">
+                    <img src="https://pbs.twimg.com/profile_images/3527974518/10a1426d8d853eb12ff308542a53f543.jpeg" class="coffee__img">
+                    <h2 class="coffee__name">Alfred Hitchcock</h2>
+                    <p class="coffee__descr">
+                        Ranked #2 in Empire (UK) magazine's "The Greatest Directors Ever!" in 2005.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="sect sect--brown sect--no-bottom">
+        <div class="container">
+            <div class="row row--center">
+                <div class="col-md-5 col-sm-6 col--inbl ">
+                    <h1 class="sect__title sect--white-text">The Classic 80's</h1>
+                    <p class="sect__subtitle sect--white-text">
+                        Everybody agrees that the 80s was a great decade for movies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="story-img"></div>
+
+    <div class="half-sect">
+        <div class="half half-sect__first">
+            <div class="description">
+                <h2 class="description__title">For the 90's Kids</h2>
+                <p class="description__p">The decade that brought you indie-cinema breakouts and bullet-time blockbusters, fight clubs and foul-mouthed clerks, charismatic cannibal serial killers and “Choose Life!” sloganeering, Rushmore Academy overachievers and Royales with
+                    Cheese. A surprisingly fertile period for filmmakers and film lovers.</p>
+            </div>
+
+        </div>
+        <div class="half half-sect__second"> </div>
+    </div>
+
+    <div class="sect sect--great">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-7 col-sm-offset-4 col-md-offset-6">
+                    <div class="description">
+                        <h2 class="des__title">The blockbusters of this century</h2>
+                        <p class="des__p">The advancement of film technologies and favorites of most of us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sect sect--best sect--center">
+        <div class="container">
+            <div class="row row--center">
+                <div class="col-md-6 col-sm-7 col-xs-12">
+                    <h1 class="sect__title best--bottom sect--white-text">One stop to know everything about a movie.</h1>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-3 icon1">
+                            <a href="http://localhost:3001/display">
+                                <img src="https://icon-library.net/images/search-icon/search-icon-0.jpg" class="best__img">
+                                <h2 class="best__title">Search Movies</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 icon2">
+                            <a href="http://localhost:3001/dashboard">
+                                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/website-dashboard-558373.png" class="best__img">
+                                <h2 class="best__title">Dashboard</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 icon3">
+                            <a href="http://localhost:3001/analytics">
+                                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/predictive-analytics-1-766110.png" class="best__img">
+                                <h2 class="best__title">Exploratory Analytics</h2>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <p class="sect__subtitle best--margin sect--white-text ">
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="sect blog sect--grey">
+        <div class="container">
+            <div class="row row--center">
+                <div class="col-md-5 col-sm-6 col--inbl">
+                    <h1 class="sec__title">Latest Movie News</h1>
+                    <p class="sec__subtitle">
+                        Get the latest movie related news from the top movie blogs.
+                    </p>
+                </div>
+            </div>
+            <div class="row last-articles">
+                <div class="col-md-4 col-sm-4">
+                    <div class="article-pre article-pre-1" onclick="window.open('https://www.cinemablend.com/news/2485377/frozen-ii-has-a-post-credits-scene-with-a-callback-to-the-first-movie')">
+                        <div class="article-pre__img">
+                        </div>
+                        <div class="article-pre__info">
+                            <h1 class="article-pre__title">
+                                Frozen II Has A Post-Credits Scene With A Callback To The First Movie
+                            </h1>
+                            <span class="article-pre__date">Nov 22, 2019</span>
+                            <p class="article-pre__ex">
+                                We’re about to get into some spoilers for Disney’s long-awaited animated movie Frozen II. To explain the end-credits scene, I first need to explain a moment from the movie. So, seriously, if you don’t want to be spoiled, please check out one of our other
+                                lovely articles. It’s becoming more and more common for movies to offer mid-credits, end-credits, or post-credits scenes and Frozen II is no exception.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="article-pre article-pre-2" onclick="window.open('https://movieweb.com/the-shining-white-house-horror-movie-fede-alvarez/')">
+                        <div class="article-pre__img">
+                        </div>
+                        <div class="article-pre__info">
+                            <h1 class="article-pre__title">
+                                The Shining in the White House: Don't Breathe Director Has His Next Movie
+                            </h1>
+                            <span class="article-pre__date">Nov 21, 2019</span>
+                            <p class="article-pre__ex">
+                                We let you guys know earlier this week that The Girl in the Spider's Web director Fede Alvarez's upcoming reboot of Tobe Hooper's horror classic The Texas Chainsaw Massacre has snagged its screenwriter with first-timer, Chris Thomas Devlin. Alvarez is
+                                only set to produce that new The Texas Chainsaw Massacre flick but today we have word that he has chosen his next directing effort.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="article-pre article-pre-3" onclick="window.open('https://screenrant.com/disney-plus-not-netflix-killer-subscribers-success/')">
+                        <div class="article-pre__img">
+                        </div>
+                        <div class="article-pre__info">
+                            <h1 class="article-pre__title">
+                                Disney+ Isn’t The Netflix Killer Everybody Expected
+                            </h1>
+                            <span class="article-pre__date">Nov 20, 2019</span>
+                            <p class="article-pre__ex">
+                                Disney+ has been doing quite well since it launched, but it's not the Netflix killer that everyone expected. The House of Mouse has now officially joined the streaming wars with Disney+, but it's not really becoming a threat to the original streaming
+                                giant, Netflix. The three biggest competitors in the streaming business are of course Netflix, Hulu, and Amazon Prime Video.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row--margin row--center">
+                <a href="#" class="btn">Browse menu</a>
+            </div>
+        </div>
+    </div>
+    <div class="sect-t-footer" id="footer1"></div>
+
+    <footer class="footer">
+        <div class="footer__half footer__half-1">
+            <h2 class="footer__big-title">About Us</h2>
+            <h3 class="footer__title"></h3>
+            <p class="footer__desc">We are Graduate Students from SJSU</p>
+            <h3 class="footer__title"></h3>
+            <p class="footer__desc">This application was designed as a part of CMPE 280 Final Project</p>
+
+        </div>
+        <div class="footer__half footer__half-2">
+            <h2 class="footer__big-title">CONTACT</h2>
+            <h3 class="footer__title">Team YYY</h3>
+            <p class="footer1__desc">Team Member 1: Ajith Balaji Nagarajan </p>
+            <p class="footer1__desc">Email: ajithbalaji.nagarajan@sjsu.edu</p>
+            <p class="footer1__desc">Team Member 2: Pooja Ramaswamy</p>
+            <p class="footer1__desc">Email: pooja.ramaswamy@sjsu.edu</p>
+            <p class="footer1__desc">Team Member 3: Deep Khajanchi </p>
+            <p class="footer1__desc">Email: deep.khajanchi@sjsu.edu</p>
+            <p class="footer1__desc">Team Member 4: Ezana Tesfaye </p>
+            <p class="footer1__desc">Email: ezana.tesfaye@sjsu.edu</p>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        var height = $('.footer').height();
+        $('.sect-t-footer').css('height', height);
+    });
+</script>
