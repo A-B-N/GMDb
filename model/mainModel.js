@@ -171,3 +171,28 @@ module.exports.get_data = function(req, res) {
         res.json(project);
     });
 };
+
+module.exports.get_budget = function(req, res) {
+    res.render('budget');
+};
+module.exports.post_budget = function(req, res) {
+    res.render('budget');
+};
+module.exports.get_family = function(req, res) {
+    res.render('family');
+};
+module.exports.post_family = function(req, res) {
+    res.render('family');
+};
+module.exports.get_star = function(req, res) {
+    res.render('stars');
+};
+module.exports.post_star = function(req, res) {
+    res.render('stars');
+};
+module.exports.get_fail = function(req, res) {
+    res.render('fail');
+};
+module.exports.post_fail = function(req, res) {
+    res.render('fail');
+};

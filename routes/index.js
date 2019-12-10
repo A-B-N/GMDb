@@ -16,17 +16,18 @@ router.post('/dashboard', ctrlMain.post_dash);
 router.get('/analytics', modelMain.get_analytics);
 router.post('/analytics', modelMain.post_analytics);
 router.get('/data', modelMain.get_data);
-router.get('/search', modelMain.get_search);
-router.post('/search', modelMain.post_search);
+router.get('/budget', modelMain.get_budget);
+router.post('/budget', modelMain.post_budget);
+router.get('/family', modelMain.get_family);
+router.post('/family', modelMain.post_family);
+router.get('/stars', modelMain.get_star);
+router.post('/stars', modelMain.post_star);
+router.get('/fail', modelMain.get_fail);
+router.post('/fail', modelMain.post_fail);
 
-router.get('/addmovie', modelMain.get_addmovie);
-router.post('/addmovie', modelMain.post_addmovie);
 
-router.get('/deletemovie', modelMain.get_deletemovie);
-router.post('/deletemovie', modelMain.post_deletemovie);
 
-router.get('/updatemovie', modelMain.get_updatemovie);
-router.post('/updatemovie', modelMain.post_updatemovie);
+
 
 
 module.exports = router;

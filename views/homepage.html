@@ -1,6 +1,7 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="http://www.iconarchive.com/download/i61405/hadezign/hobbies/Movies.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#daa37f">
     <style>
@@ -46,8 +47,51 @@ GLOBAL
             text-decoration: none;
         }
         
-        li a:hover {
+        li a:hover,
+        .dropdown1:hover .dropbtn1 {
             background-color: #111;
+        }
+        
+        .dropdown1 {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown1 .dropbtn1 {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown1-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown1-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown1-content a:hover {
+            background-color: grey;
+        }
+        
+        .dropdown1:hover .dropdown1-content {
+            display: block;
         }
         
         p {
@@ -768,11 +812,25 @@ RESPONSIVE
 <body>
     <ul>
         <li>
+            <a href="http://localhost:3001/">Home</a>
+        </li>
+        <li>
             <a href="http://localhost:3001/display">Find a Movie</a>
         </li>
         <li>
             <a href="http://localhost:3001/dashboard">Dashboard</a>
         </li>
+        <div class="dropdown1">
+            <button class="dropbtn1">More Dashboard Info
+                <i class="fa fa-caret-down"></i>
+             </button>
+            <div class="dropdown1-content">
+                <a href="http://localhost:3001/budget">Top Budget-Gross Movies</a>
+                <a href="http://localhost:3001/family">Top Family Movies</a>
+                <a href="http://localhost:3001/stars">The Popular Stars and Directors</a>
+                <a href="http://localhost:3001/fail">The Box Office Failures</a>
+            </div>
+        </div>
         <li>
             <a href="http://localhost:3001/analytics">Exploratory Analytics</a>
         </li>

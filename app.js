@@ -26,8 +26,9 @@ app.listen(3001, () => {
         }
         database = client.db(DATABASE_NAME);
         collection = database.collection("imdbcollection");
-        console.log("connected to" + DATABASE_NAME + "!");
+
     })
+    console.log("The application runs at: http://localhost:3001/ . Copy and Paste it in the browser.")
 })
 
 /*

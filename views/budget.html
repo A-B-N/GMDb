@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.iconarchive.com/download/i61405/hadezign/hobbies/Movies.ico" />
+    <title>GMDB-Budget/Gross</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <style>
+        .gross {
+            background-color: #333;
+            padding-bottom: 7.5px;
+            padding-top: 7.5px;
+        }
+        
+        .gross h3 {
+            color: #fff;
+        }
+        
+        .ever-got {
+            background-color: #333;
+            padding-bottom: 5px;
+        }
+        
+        .ever-got1 {
+            background-color: chocolate;
+        }
+        
+        .ever-got1 p {
+            font-size: 30px;
+            color: #333;
+            font-family: 'Oswald';
+        }
+        
+        .ever-got p {
+            font-size: 30px;
+            color: #fff;
+            font-family: 'Oswald';
+        }
+        
+        .header1 {
+            background-color: #111;
+            padding-top: 5%;
+            margin-bottom: -21px;
+        }
+        
+        h2 {
+            margin: 0;
+        }
+        
+        .carousel {
+            margin-bottom: -21px;
+        }
+        
+        .ttl-page {
+            color: #fff;
+            padding-bottom: 5%;
+        }
+        
+        .dropdown1 {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown1 .dropbtn1 {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown1-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown1-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown1-content a:hover {
+            background-color: grey;
+        }
+        
+        .dropdown1:hover .dropdown1-content {
+            display: block;
+        }
+        
+        .carousel,
+        .item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+            background: #000;
+        }
+        
+        .carousel-caption {
+            padding-bottom: 80px;
+        }
+        
+        h2 {
+            font-size: 60px;
+        }
+        
+        p {
+            padding: 10px
+        }
+        /* Background images are set within the HTML using inline CSS, not here */
+        
+        .fill {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            opacity: 0.6;
+        }
+        /**
+ * Button
+ */
+        
+        .btn-transparent {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn-transparent:hover {
+            background-color: #fff;
+        }
+        
+        .btn-rounded {
+            border-radius: 70px;
+        }
+        
+        .btn-large {
+            padding: 11px 45px;
+            font-size: 18px;
+        }
+        /**
+ * Change animation duration
+ */
+        
+        .animated {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100px, 0, 0);
+                transform: translate3d(100px, 0, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100px, 0, 0);
+                transform: translate3d(100px, 0, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+        
+        .fadeInRight {
+            -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+        }
+        
+        html,
+        body {
+            height: 400px;
+            scroll-behavior: smooth;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        .cen {
+            color: #fff;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover,
+        .dropdown1:hover .dropbtn1,
+        .dropbtn1:focus {
+            background-color: #111;
+        }
+        
+        p {
+            color: #767676;
+            line-height: 23px;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .btn {
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            background-color: #daa37f;
+            border-radius: 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .btn--opacity {
+            animation: opacity 3s;
+        }
+        
+        .sect {
+            padding: 130px 0;
+        }
+        
+        .sect--brown {
+            background-color: #1d140b;
+        }
+        
+        .sect--grey {
+            background-color: #ebebeb;
+        }
+        
+        .sect--no-bottom {
+            padding-bottom: 0;
+        }
+        
+        .sect--white-text {
+            color: #fff;
+        }
+        
+        .col--inbl {
+            display: inline-block;
+            float: none;
+        }
+        
+        .row--center {
+            text-align: center;
+        }
+        
+        .row--small {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .row--margin {
+            margin-top: 65px;
+        }
+        /*-------------------------------- ANIOMATION ---------------------------------*/
+        
+        @-webkit-keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @-moz-keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @-o-keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @keyframes banner-in {
+            0% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        @-webkit-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-o-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="http://localhost:3001/">Home</a>
+        </li>
+        <li>
+            <a href="http://localhost:3001/display">Find a Movie</a>
+        </li>
+        <li>
+            <a href="http://localhost:3001/dashboard">Dashboard</a>
+        </li>
+        <div class="dropdown1">
+            <button class="dropbtn1">More Dashboard Info
+                  <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown1-content">
+                <a href="http://localhost:3001/budget">Top Budget-Gross Movies</a>
+                <a href="http://localhost:3001/family">Top Family Movies</a>
+                <a href="http://localhost:3001/stars">The Popular Stars and Directors</a>
+                <a href="http://localhost:3001/fail">The Box Office Failures</a>
+            </div>
+        </div>
+
+
+        <li>
+            <a href="http://localhost:3001/analytics ">Exploratory Analytics</a>
+        </li>
+        <li>
+            <a href="http://localhost:3001/#footer1 ">About Us</a>
+        </li>
+
+    </ul>
+
+    <div class="header1">
+        <center>
+            <h1 class="ttl-page">Top Budget-Gross Movies</h1>
+        </center>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="http://elder-geek.com/wp-content/uploads/2009/12/avatarHD1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Avatar (2009)</h2>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://jonnegroni.com/wp-content/uploads/2016/04/the-dark-knight-rises-movie.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>The Dark Knight Rises (2013)</h2>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="http://oyster.ignimgs.com/wordpress/stg.ign.com/2015/04/avengers-1600d.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Avengers: Age of Ultron (2015)</h2>
+
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="ever-got">
+        <br>
+        <br>
+        <center>
+            <p>Ever spent hours surfing over the internet to find what are all those movies that are made with huge budgets?</p>
+        </center>
+    </div>
+    <div class="ever-got1">
+        <center>
+            <p>Don't worry we present you the top 10 big budget movies of all time, right here!</p>
+        </center>
+    </div>
+
+
+
+
+    <center>
+        <div class='tableauPlaceholder' id='viz1575870778761' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard_15742030841820&#47;Dashboard6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dashboard_15742030841820&#47;Dashboard6' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard_15742030841820&#47;Dashboard6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+    </center>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1575870778761');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '1000px';
+            vizElement.style.height = '627px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '1000px';
+            vizElement.style.height = '627px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '727px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    <div>
+        <br>
+
+    </div>
+    <div class="gross">
+        <h3>
+            <center>To all those movie fans who are eager to know about the top grossing movies,</center>
+        </h3>
+        <h3>
+            <center>We present to you the top 20 highest grossing movies of all time.</center>
+        </h3>
+    </div>
+    <center>
+        <div class='tableauPlaceholder' id='viz1575870832074' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard_15742030841820&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dashboard_15742030841820&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard_15742030841820&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+    </center>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1575870832074');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '1000px';
+            vizElement.style.height = '627px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '1000px';
+            vizElement.style.height = '627px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '727px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+
+
+</body>
+
+</html>
