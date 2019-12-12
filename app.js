@@ -15,10 +15,10 @@ var session = require('express-session');
 var index = require('./routes/index');
 
 var app = express();
-var pub = __dirname + 'public';
+
 var database, connection;
 
-app.use(express.static(pub));
+app.use("/static", express.static('./static/'));
 app.listen(process.env.PORT || 3001, () => {
     mongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
         if (error) {
