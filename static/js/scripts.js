@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // The base url for all API calls
-    var apiBaseURL = 'https://api.themoviedb.org/3/';
+    var apiBaseURL = 'http://api.themoviedb.org/3/';
 
     // URL in Authentication. Base URL of image
     var imageBaseUrl = 'https://image.tmdb.org/t/p/';
