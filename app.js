@@ -19,7 +19,7 @@ var app = express();
 var database, connection;
 
 app.use("/static", express.static('./static/'));
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     mongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
         if (error) {
             throw error;
