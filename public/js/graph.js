@@ -16,7 +16,7 @@ function makeGraphs(error, projectsJson) {
 
     projectsJson.forEach(function(d) {
         d["profit"] = d["gross"] - d["budget"];
-        console.log(d["profit"]);
+
     });
 
 
