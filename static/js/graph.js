@@ -124,13 +124,9 @@ function makeGraphs(error, projectsJson) {
     var timeChart = dc.barChart("#num-movies-per-year");
     var topMovieChartbyYear = dc.lineChart("#highest-rated-chart");
     var genreChart = dc.rowChart("#funding-by-genre-row-chart");
-    var totalGrossND = dc.numberDisplay("#total-gross-nd");
-    var totalBudgetND = dc.numberDisplay("#total-budgets-nd");
-    var titleGrossChart = dc.rowChart("#funding-by-title-row-chart");
-    var profitChart = dc.rowChart("#most-profitable-row-chart");
-    var totalMoviesND = dc.numberDisplay("#total-movies-nd");
+
+
     var budgetChart = dc.pieChart("#most-expensive-pie-chart");
-    var budgetIMDBChart = dc.bubbleChart("#bubble-chart");
 
     var numberFormat = d3.format(".0f");
 
@@ -205,102 +201,7 @@ function makeGraphs(error, projectsJson) {
     budgetChart.othersGrouper(false);
 
 
-    profitChart
-        .ordinalColors(["#ffd847", "#f58277", "#6dc2e8", "#9178ea", "#07b6ca"])
-        .width(400)
-        .height(250)
-        .dimension(titleDim)
-        .group(filmLeader)
-        .xAxis().ticks(10);
-    profitChart.ordering(function(d) {
-        return -d.value
-    });
-    profitChart.rowsCap([5]);
-    profitChart.othersGrouper(false);
 
-
-    titleGrossChart
-        .ordinalColors(["#ffd847", "#f58277", "#6dc2e8", "#9178ea", "#07b6ca"])
-        .width(400)
-        .height(250)
-        .dimension(titleDim)
-        .group(filmGross)
-        .xAxis().ticks(10);
-    titleGrossChart.ordering(function(d) {
-        return -d.value
-    });
-    titleGrossChart.rowsCap([5]);
-    titleGrossChart.othersGrouper(false);
-
-
-    totalGrossND
-        .formatNumber(d3.format("d"))
-        .valueAccessor(function(d) {
-            return d;
-        })
-        .group(totalGross);
-
-
-    totalBudgetND
-        .formatNumber(d3.format("d"))
-        .valueAccessor(function(d) {
-            return d;
-        })
-        .group(totalBudget);
-    //     .formatNumber(d3.format(".3s"));
-    // //
-    totalMoviesND
-        .formatNumber(d3.format("d"))
-        .valueAccessor(function(d) {
-            return d;
-        })
-        .group(totalMovies);
-    //
-
-    budgetIMDBChart
-        .width(1650)
-        .height(800)
-        .margins({ top: 20, right: 100, bottom: 30, left: 40 })
-        .transitionDuration(1500)
-        .dimension(titleDim)
-        .group(bubbleList)
-        .colors(d3.scale.category20())
-        .keyAccessor(function(p) {
-            return p.value.imdbRating;
-        })
-        .valueAccessor(function(p) {
-            return p.value.fBudget;
-        })
-        .radiusValueAccessor(function(p) {
-            return p.value.fGross;
-        })
-        .x(d3.scale.linear().range([1, 10]))
-        .r(d3.scale.linear().domain([0, 850]))
-        .minRadiusWithLabel(34)
-        .elasticY(true)
-        .yAxisPadding(1)
-        .elasticX(true)
-        .xAxisPadding(2)
-        .xAxisLabel("IMDB Rating")
-        .yAxisLabel("Budget of Movie")
-        .maxBubbleRelativeSize(.04)
-        .renderHorizontalGridLines(true)
-        .renderVerticalGridLines(true)
-        .renderLabel(true)
-        .renderTitle(true)
-        .title(function(p) {
-            return p.key +
-                "\n" +
-                "Gross : " + numberFormat(p.value.fGross) + "\n" +
-                "Budget : " + numberFormat(p.value.fBudget) + "\n" +
-                "IMDB Rating : " + numberFormat(p.value.imdbRating) + "\n"
-        });
-    budgetIMDBChart.yAxis().tickFormat(function(s) {
-        return s;
-    });
-    budgetIMDBChart.xAxis().tickFormat(function(s) {
-        return s;
-    });
     topMovieChartbyYear
         .width(400)
         .height(250)
