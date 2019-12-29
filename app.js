@@ -5,7 +5,7 @@ var mongo = require('mongodb');
 const mongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 var path = require('path');
-const CONNECTION_URL = "mongodb+srv://team_280:Gmdb280@cluster7-hzwc0.mongodb.net/test?retryWrites=true&w=majority";
+const CONNECTION_URL = "Enter your MongoDB connection url here(preferably MongoDB atlas)";
 const DATABASE_NAME = "Movie";
 var express = require('express');
 var path = require('path');
