@@ -5,7 +5,7 @@ $(document).ready(function() {
     // URL in Authentication. Base URL of image
     var imageBaseUrl = 'https://image.tmdb.org/t/p/';
 
-    var apiKey = '7018e38dfe0a5660953911c282286a4d';
+    var apiKey = 'Enter your API key here';
 
 
     const nowPlayingURL = apiBaseURL + 'movie/now_playing?api_key=' + apiKey;
